@@ -43,7 +43,7 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+uint8_t teste=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,6 +97,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  teste++;
+	  HAL_Delay(500);
+	  if (teste>=10) {
+		  teste=0;
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
