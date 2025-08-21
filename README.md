@@ -66,5 +66,7 @@ Todos os exemplos seguem a licença padrão da STMicroelectronics (AS-IS). Utili
 
 
 Desenvolvido como parte de atividades práticas e estudos sobre sistemas embarcados com STM32.
+Estes projetos foram desenvolvidos com base no curso de Sistemas Embarcados com STM32 do Professor Gabriel Vigiano.
+
 
 ---
