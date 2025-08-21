@@ -18,9 +18,9 @@ Conecte o potenciômetro da seguinte forma para fornecer uma tensão variável e
   * **Um pino lateral:** Conecte ao **`3V3`** da placa.
   * **O outro pino lateral:** Conecte ao **`GND`** da placa.
 
-\<div align="center"\>
-\<img src="[https://github.com/user-attachments/assets/cfd491c7-fa5d-4b6b-9579-6e3c83fe4360](https://github.com/user-attachments/assets/cfd491c7-fa5d-4b6b-9579-6e3c83fe4360)" width="600px" /\>
-\</div\>
+<div align="center">
+<img src="https://github.com/user-attachments/assets/cfd491c7-fa5d-4b6b-9579-6e3c83fe4360" width="600px" />
+</div>
 
 ## Funcionalidade do Código
 
@@ -132,6 +132,6 @@ Como não há saída de dados, o debugger é a nossa janela para o microcontrola
 
 Agora, você verá os valores das variáveis `adc` e `adc_f` sendo atualizados na janela "Expressions" a cada 500ms. Gire o potenciômetro e observe como os valores mudam em tempo real\!
 
-\<div align="center"\>
-\<img src="[https://github.com/user-attachments/assets/ac95ab29-7061-44b0-b153-62ae62eb2d83](https://github.com/user-attachments/assets/ac95ab29-7061-44b0-b153-62ae62eb2d83)" width="600px" /\>
-\</div\>
+<div align="center">
+<img src="https://github.com/user-attachments/assets/ac95ab29-7061-44b0-b153-62ae62eb2d83" width="600px" />
+</div>
