@@ -49,7 +49,6 @@ Cada pasta ou arquivo representa um exemplo prático. Alguns exemplos presentes:
 
 ## 📌 Placa Utilizada
 
-XXXXX
 
 * **Nucleo-F446RE**
 
