@@ -44,6 +44,7 @@ ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
 uint16_t adc;
+float adc_f;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -102,7 +103,7 @@ int main(void)
 	 HAL_ADC_PollForConversion(&hadc1, 100);
 
 	 adc = HAL_ADC_GetValue(&hadc1);
-
+	 adc_f = adc * 0.00322580;
 	 HAL_Delay(500);
 
 	 HAL_ADC_Stop(&hadc1);
