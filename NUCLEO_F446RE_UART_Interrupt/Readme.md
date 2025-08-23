@@ -57,7 +57,7 @@ Essa resposta é imediata e pode acontecer a qualquer momento, mesmo durante a e
 ### Testando a Funcionalidade
 
   * **Observe a Transmissão:** Primeiro, apenas observe o terminal. Você verá as mensagens `X = ...` aparecendo a cada 5 segundos.
-  * **Interaja com a Recepção:** A qualquer momento, digite **dois caracteres** no seu terminal (ex: `ab`, `T1`, `Z5`) e envie. Assim que o segundo caractere for enviado, você verá a resposta `RECEBIDO: ...` aparecer instantaneamente no terminal, sem esperar o ciclo de 5 segundos terminar.
+  * **Interaja com a Recepção:** A qualquer momento, digite **um caracteres** no seu terminal (ex: `a`, `1`, `Z`) e aperte **enter**. Assim que o segundo caractere for enviado, você verá a resposta `RECEBIDO: ...` aparecer instantaneamente no terminal, sem esperar o ciclo de 5 segundos terminar.
 
 -----
 
@@ -142,4 +142,5 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   * **Lógica Interna:**
     1.  O código envia a mensagem de confirmação, incluindo o primeiro byte que foi recebido.
     2.  `memset(...)`: Zera o `buffer_rx`, limpando os dados antigos.
+
     3.  **`HAL_UART_Receive_IT(...)`**: Esta é a linha **mais importante** do callback. Após processar os dados recebidos, ela **re-arma a interrupção**, dizendo ao hardware para começar a ouvir novamente pelos próximos 2 bytes. Sem esta linha, o sistema só receberia dados uma única vez.
