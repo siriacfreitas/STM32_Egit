@@ -34,10 +34,10 @@ X = 0003
 
 ### Recepção (Entrada ⬅)
 
-O microcontrolador está sempre pronto para receber dados. Sempre que você envia **2 caracteres** do seu terminal para a placa, ela irá **imediatamente** responder com uma mensagem de confirmação, ecoando o primeiro caractere que você enviou. Por exemplo, se você digitar `OK` e enviar, a placa responderá:
+O microcontrolador está sempre pronto para receber dados. Sempre que você envia **1 caracteres e aperta enter** do seu terminal para a placa, ela irá **imediatamente** responder com uma mensagem de confirmação, ecoando o primeiro caractere que você enviou. Por exemplo, se você digitar `A` e enviar, a placa responderá:
 
 ```
-RECEBIDO: O
+RECEBIDO: A
 ```
 
 Essa resposta é imediata e pode acontecer a qualquer momento, mesmo durante a espera de 5 segundos da tarefa de transmissão, pois é tratada por uma **interrupção**.
@@ -144,3 +144,4 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     2.  `memset(...)`: Zera o `buffer_rx`, limpando os dados antigos.
 
     3.  **`HAL_UART_Receive_IT(...)`**: Esta é a linha **mais importante** do callback. Após processar os dados recebidos, ela **re-arma a interrupção**, dizendo ao hardware para começar a ouvir novamente pelos próximos 2 bytes. Sem esta linha, o sistema só receberia dados uma única vez.
+
