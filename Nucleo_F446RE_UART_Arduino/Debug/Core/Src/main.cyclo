@@ -1,0 +1,9 @@
+../Core/Src/main.c:87:5:main	1
+../Core/Src/main.c:173:6:SystemClock_Config	3
+../Core/Src/main.c:221:13:MX_UART4_Init	2
+../Core/Src/main.c:254:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:287:13:MX_GPIO_Init	1
+../Core/Src/main.c:321:6:Task_ArduinoRx	4
+../Core/Src/main.c:361:6:Task_PCRx	4
+../Core/Src/main.c:410:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:427:6:Error_Handler	1
