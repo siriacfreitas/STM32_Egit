@@ -184,6 +184,10 @@ A lógica é a mesma, mas a fonte dos dados é `huart2` e o destino é `huart4`.
 -   **Conecte os terras (GND) para referência de tensão comum:**
     -   Pino `GND` do STM32 → Pino `GND` do Arduino.
 
+<div align="center">
+<img src="https://github.com/user-attachments/assets/9a331f62-5e1f-48c8-882b-43803acee2f2" width="600px" />
+</div>
+
 ### Passos para Execução
 
 1.  **Carregue os Códigos:** Compile e envie cada código para sua respectiva placa.
