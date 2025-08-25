@@ -188,6 +188,35 @@ A lógica é a mesma, mas a fonte dos dados é `huart2` e o destino é `huart4`.
 <img src="https://github.com/user-attachments/assets/9a331f62-5e1f-48c8-882b-43803acee2f2" width="600px" />
 </div>
 
+**⚠️ ATENÇÃO: Compatibilidade de Tensão\!**
+
+Microcontroladores Arduino (como o Uno e Mega) operam com lógica de **5V**, enquanto a maioria das placas STM32 opera com **3.3V**. Conectar diretamente a saída de 5V (pino TX) do Arduino na entrada de 3.3V (pino RX) do STM32 pode **danificar permanentemente** o STM32.
+
+Para garantir uma comunicação segura, é **essencial** usar um **conversor de nível lógico bidirecional**.
+
+O diagrama abaixo mostra como conectar os dispositivos usando o conversor:
+
+Siga estes passos para a conexão:
+
+1.  **Alimente o Conversor de Nível Lógico:**
+
+      * Conecte o pino `HV` (High Voltage) do conversor ao pino **5V** do Arduino.
+      * Conecte o pino `LV` (Low Voltage) do conversor ao pino **3.3V** do STM32.
+      * Conecte o pino `GND` do conversor a um pino **GND** do Arduino e do STM32.
+
+2.  **Conecte as Linhas de Dados através do Conversor:**
+
+      * **Arduino (5V) para STM32 (3.3V):**
+          * Pino **TX2** do Arduino → Canal do lado de alta tensão (`HVx`) do conversor.
+          * Canal correspondente do lado de baixa tensão (`LVx`) → Pino **RX** da UART do STM32.
+      * **STM32 (3.3V) para Arduino (5V):**
+          * Pino **TX** da UART do STM32 → Canal do lado de baixa tensão (`LVy`) do conversor.
+          * Canal correspondente do lado de alta tensão (`HVy`) → Pino **RX2** do Arduino.
+
+3.  **Conecte os Terras (GND):**
+
+      * Garanta que os pinos **GND** do Arduino, do STM32 e do conversor de nível lógico estejam todos conectados entre si para criar uma referência de tensão comum.
+
 ### Passos para Execução
 
 1.  **Carregue os Códigos:** Compile e envie cada código para sua respectiva placa.
